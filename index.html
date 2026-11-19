@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mark&#39;s List | A Little Magic</title>
-  <meta name="description" content="Straight fro whatsapp">
+  <meta name="description" content="Stright from whatsapp">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1590,7 +1590,7 @@
     <!-- Header -->
     <header class="site-header">
       <h1 class="site-title">Mark's List ⚡</h1>
-      <p class="site-sub">A little magic. A lot of possibilities.</p>
+      <p class="site-sub">Straight from whatsapp</p>
     </header>
 
     <div id="errorBox"></div>
@@ -1598,7 +1598,7 @@
     <!-- Login -->
     <div id="loginBox" class="card" style="display:none">
       <span class="login-emoji">🔐</span>
-      <p class="login-title">Enter the secret code</p>
+      <p class="login-title">Enter the spell</p>
       <div class="input-group">
         <div class="role-toggle-container">
           <span class="role-label active" id="label-you"
@@ -2235,7 +2235,7 @@
 
         const cardHeaderHtml = isHiddenSurprise
           ? `<p class="surprise-placeholder-title">🧙 This is a surprise! ${matchLabel}</p>
-             <p class="idea-notes" style="font-style:italic">Pick some dates and you'll know what it is 😉</p>
+             <p class="idea-notes" style="font-style:italic">Pick a date and you'll know what it is 😉</p>
              ${availTicksHtml}`
           : `<p class="idea-title">${isPicked ? '✅ ' : '💡 '}${idea.title} ${dur > 1 ? `<span style="font-size:12px;color:var(--text-soft);font-weight:600;margin-left:4px">(${dur} days)</span>` : ''}${matchLabel}</p>
           ${isEditing ? '' : notesBlock}
@@ -2824,7 +2824,7 @@
       const email = role === 'you' ? YOU_EMAIL : PARTNER_EMAIL;
       const { error } = await sb.auth.signInWithPassword({ email, password });
 
-      if (error) { showError('The password doesn't seem right. Try again!'); return; }
+      if (error) { showError("It's not Leviosa, it's Leviosaaa. Try again!"); return; }
       await showApp();
     });
 
