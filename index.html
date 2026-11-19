@@ -4,34 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Date & Travel Planner 💕</title>
-  <meta name="description" content="Let me make it easy for you! 😉">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+  <title>Mark&#39;s List | A Little Magic</title>
+  <meta name="description" content="Straight fro whatsapp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap"
     rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
-      --bg-from: #fff0f5;
-      --bg-to: #fce4ec;
-      --card: rgba(255, 255, 255, 0.75);
-      --card-border: rgba(255, 180, 180, 0.35);
-      --text: #3d2c35;
-      --text-soft: #9c7080;
-      --text-mute: #c9a8b5;
-      --accent: #e05c7e;
-      --accent-hover: #c94e6e;
-      --accent-bg: #fde8ee;
-      --you: #7c5cbf;
-      --you-bg: #ede7f9;
-      --partner: #e08030;
-      --partner-bg: #fdf0e0;
-      --both: #3a9e6f;
-      --both-bg: #e2f5ec;
-      --shadow: 0 8px 32px rgba(224, 92, 126, 0.12);
-      --shadow-hover: 0 16px 48px rgba(224, 92, 126, 0.22);
+      --bg-from: #101a2d;
+      --bg-to: #202b3c;
+      --card: rgba(247, 241, 222, 0.94);
+      --card-border: rgba(190, 155, 78, 0.42);
+      --text: #29251d;
+      --text-soft: #6f6248;
+      --text-mute: #9b8d70;
+      --accent: #8b2635;
+      --accent-hover: #6f1d2a;
+      --accent-bg: #f2e4d0;
+      --you: #344d70;
+      --you-bg: #e2e9f1;
+      --partner: #a47724;
+      --partner-bg: #f4ebd3;
+      --both: #416b50;
+      --both-bg: #e2ecdf;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+      --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.32);
       --radius: 20px;
       --radius-sm: 12px;
     }
@@ -45,7 +45,11 @@
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: linear-gradient(135deg, var(--bg-from) 0%, var(--bg-to) 100%);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(190, 155, 78, 0.13) 0 1px, transparent 2px),
+        radial-gradient(circle at 82% 32%, rgba(255, 244, 207, 0.12) 0 1px, transparent 2px),
+        radial-gradient(circle at 42% 76%, rgba(190, 155, 78, 0.12) 0 1px, transparent 2px),
+        linear-gradient(135deg, var(--bg-from) 0%, var(--bg-to) 100%);
       color: var(--text);
       min-height: 100vh;
       padding: 2rem 1.5rem 6rem;
@@ -53,7 +57,7 @@
       position: relative;
     }
 
-    /* ── Floating hearts background ── */
+    /* ── Floating magical particles ── */
     .hearts-bg {
       position: fixed;
       inset: 0;
@@ -92,7 +96,7 @@
 
     .crack-line-shadow {
       fill: none;
-      stroke: #7c5cbf;
+      stroke: #b99a55;
       stroke-width: 1.3;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -100,7 +104,7 @@
       opacity: 0.22;
     }
 
-    .heart-float {
+    .magic-float {
       position: absolute;
       bottom: -60px;
       font-size: 22px;
@@ -145,12 +149,12 @@
     }
 
     .site-title {
-      font-family: 'Pacifico', cursive;
+      font-family: 'Cinzel', serif;
       font-size: 2.2rem;
       color: var(--accent);
       margin: 0 0 6px;
       letter-spacing: 0.5px;
-      text-shadow: 0 2px 12px rgba(224, 92, 126, 0.25);
+      text-shadow: 0 2px 14px rgba(215, 178, 91, 0.28);
     }
 
     .site-sub {
@@ -239,7 +243,7 @@
       border: 1.5px solid var(--card-border);
       border-radius: var(--radius-sm);
       padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 252, 242, 0.96);
       color: var(--text);
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
@@ -249,7 +253,7 @@
     input:focus,
     select:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(224, 92, 126, 0.15);
+      box-shadow: 0 0 0 3px rgba(139, 38, 53, 0.18);
     }
 
     input::placeholder {
@@ -278,25 +282,25 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent) 0%, #f472a0 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, #b8873d 100%);
       color: #fff;
-      box-shadow: 0 4px 18px rgba(224, 92, 126, 0.35);
+      box-shadow: 0 4px 18px rgba(139, 38, 53, 0.30);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, var(--accent-hover) 0%, #e05c8e 100%);
-      box-shadow: 0 6px 24px rgba(224, 92, 126, 0.45);
+      background: linear-gradient(135deg, var(--accent-hover) 0%, #946d2d 100%);
+      box-shadow: 0 6px 24px rgba(139, 38, 53, 0.38);
       transform: translateY(-1px);
     }
 
     .btn-ghost {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 250, 235, 0.72);
       color: var(--text-soft);
       border: 1.5px solid var(--card-border);
     }
 
     .btn-ghost:hover {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 252, 242, 0.98);
       transform: translateY(-1px);
     }
 
@@ -347,7 +351,7 @@
       top: 18px;
       left: 50%;
       transform: translateX(-50%) translateY(-16px);
-      background: linear-gradient(135deg, var(--accent) 0%, #f472a0 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, #b8873d 100%);
       color: #fff;
       font-weight: 800;
       font-size: 13px;
@@ -472,7 +476,7 @@
     .idea-card:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(224, 92, 126, 0.4);
+      border-color: rgba(139, 38, 53, 0.4);
     }
 
     .idea-card-picked {
@@ -499,7 +503,7 @@
     }
 
     .countdown-banner.today {
-      background: linear-gradient(135deg, var(--accent) 0%, #f472a0 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, #b8873d 100%);
       color: #fff;
     }
 
@@ -519,7 +523,7 @@
     }
 
     .card-head:active {
-      background: rgba(224, 92, 126, 0.04);
+      background: rgba(139, 38, 53, 0.04);
     }
 
     .idea-title {
@@ -624,7 +628,7 @@
       border: 1.5px solid var(--card-border);
       border-radius: var(--radius-sm);
       padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 252, 242, 0.96);
       color: var(--text);
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
@@ -635,7 +639,7 @@
 
     textarea:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(224, 92, 126, 0.15);
+      box-shadow: 0 0 0 3px rgba(139, 38, 53, 0.18);
     }
 
     textarea::placeholder {
@@ -644,7 +648,7 @@
     }
 
     .icon-btn {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 250, 235, 0.72);
       border: 1.5px solid var(--card-border);
       border-radius: 50%;
       width: 30px;
@@ -659,7 +663,7 @@
     }
 
     .icon-btn:hover {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 252, 242, 1);
     }
 
     .add-details-btn {
@@ -714,8 +718,8 @@
       font-weight: 700;
       cursor: pointer;
       user-select: none;
-      border: 1.5px solid rgba(224, 92, 126, 0.15);
-      background: rgba(255, 255, 255, 0.6);
+      border: 1.5px solid rgba(139, 38, 53, 0.18);
+      background: rgba(255, 250, 235, 0.72);
       color: var(--text-soft);
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
       line-height: 1.2;
@@ -1310,7 +1314,7 @@
     }
 
     .switch-sm input:focus+.slider-sm {
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(224, 92, 126, 0.2);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(139, 38, 53, 0.2);
     }
 
     .surprise-tag {
@@ -1418,13 +1422,13 @@
       border-radius: 999px;
       margin-bottom: 1.25rem;
       background: linear-gradient(135deg, #ff8a65 0%, var(--accent) 55%, #c94e6e 100%);
-      box-shadow: 0 6px 18px rgba(224, 92, 126, 0.4);
+      box-shadow: 0 6px 18px rgba(139, 38, 53, 0.4);
       animation: fadeSlideDown 0.6s ease both, droughtPulse 2.2s ease-in-out infinite;
     }
 
     @keyframes droughtPulse {
-      0%, 100% { box-shadow: 0 6px 18px rgba(224, 92, 126, 0.4); }
-      50% { box-shadow: 0 6px 26px rgba(224, 92, 126, 0.65); }
+      0%, 100% { box-shadow: 0 6px 18px rgba(139, 38, 53, 0.4); }
+      50% { box-shadow: 0 6px 26px rgba(139, 38, 53, 0.45); }
     }
 
     /* ── Spin the wheel ── */
@@ -1452,14 +1456,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(61, 44, 53, 0.55);
+      background: rgba(8, 14, 25, 0.72);
       backdrop-filter: blur(4px);
       padding: 20px;
     }
 
     .wheel-modal {
       background: var(--bg-from);
-      background: linear-gradient(160deg, #fff9fb 0%, #fdeef3 100%);
+      background: linear-gradient(160deg, #fbf4df 0%, #ead9b7 100%);
       border-radius: 24px;
       padding: 28px 24px 24px;
       max-width: 420px;
@@ -1579,36 +1583,14 @@
 
 <body>
 
-  <!-- Floating hearts background -->
-  <div class="glass-cracks" aria-hidden="true">
-    <svg viewBox="0 0 1000 1600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="impactGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-          <stop offset="45%" stop-color="#ffffff" stop-opacity="0.35" />
-          <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-        </radialGradient>
-      </defs>
-      <circle class="impact-core" cx="330" cy="480" r="55" />
-      <circle class="impact-core" cx="650" cy="1080" r="55" />
-      <g class="crack-line-shadow" transform="translate(1.5,1.5)">
-        <path
-          d="M330.0,480.0 L368.9,490.1 L403.9,501.1 L443.5,524.4 L470.6,537.4 M330.0,480.0 L365.4,476.6 L398.3,466.0 L427.5,449.1 L472.2,431.2 L511.3,421.9 M330.0,480.0 L357.8,499.6 L398.3,526.3 L426.6,537.0 L459.5,554.9 M330.0,480.0 L353.1,532.2 L371.7,569.2 L387.8,619.1 L400.4,671.4 M330.0,480.0 L336.5,510.6 L340.5,554.4 L346.8,590.9 L354.9,623.8 L365.7,646.0 M330.0,480.0 L294.9,500.3 L261.9,514.5 L235.0,528.2 L192.0,542.6 L146.8,552.1 M330.0,480.0 L283.0,486.3 L230.7,486.2 L179.0,487.8 M330.0,480.0 L272.9,480.7 L227.8,485.4 L179.7,482.0 M330.0,480.0 L305.2,487.2 L281.7,499.8 L246.7,514.0 L222.7,522.1 L192.0,529.7 M330.0,480.0 L321.4,419.1 L313.6,376.8 L302.9,315.9 L299.9,266.8 M330.0,480.0 L328.5,450.1 L327.4,410.4 L334.5,373.8 L334.6,341.8 L332.1,303.3 M330.0,480.0 L346.5,465.4 L370.7,442.4 L395.6,420.8 L412.4,406.8 L434.4,392.1 M330.0,480.0 L349.3,444.0 L392.2,393.7 L430.5,365.7 M330.0,480.0 L359.3,458.2 L379.1,445.7 L406.6,422.5 M330.0,480.0 L360.8,474.0 L377.7,468.4 L405.8,466.2 L429.7,463.8 M368.9,490.1 L380.7,473.4 L393.3,457.2 M336.5,510.6 L377.0,548.7 M261.9,514.5 L256.4,531.7 L248.7,548.0 M283.0,486.3 L254.8,505.1 L223.9,519.0 M328.5,450.1 L337.3,435.8 L348.5,423.3 M359.3,458.2 L418.0,443.0 M361.9,480.0 L364.6,493.4 M321.9,508.5 L309.7,506.9 L304.5,495.8 M300.1,461.5 L308.6,451.6 L320.3,445.8 L333.6,441.5 L345.5,448.8 M397.1,506.0 L393.1,537.5 M362.1,544.5 L337.8,564.5 L305.9,564.6 M286.6,422.6 L310.2,410.5 M650.0,1080.0 L691.9,1086.2 L728.5,1098.2 L774.8,1107.9 L808.9,1121.7 M650.0,1080.0 L684.3,1094.1 L722.2,1101.6 L755.2,1109.1 L784.6,1113.9 M650.0,1080.0 L628.6,1130.9 L609.7,1204.0 L578.9,1279.8 M650.0,1080.0 L645.9,1103.7 L642.1,1137.0 L635.3,1159.3 L632.1,1194.4 M650.0,1080.0 L616.3,1109.5 L579.2,1162.1 L555.1,1205.8 M650.0,1080.0 L604.8,1119.5 L578.5,1154.2 L532.4,1205.6 M650.0,1080.0 L599.8,1105.1 L566.0,1132.2 L509.4,1161.2 M650.0,1080.0 L631.5,1092.0 L613.4,1104.5 L597.5,1113.8 L579.1,1122.1 L564.5,1133.6 M650.0,1080.0 L575.5,1083.4 L494.3,1082.1 L430.7,1087.7 M650.0,1080.0 L632.3,1032.0 L607.7,989.0 L585.0,951.9 M650.0,1080.0 L663.0,1029.9 L688.3,981.6 L723.6,917.0 M650.0,1080.0 L689.1,1044.9 L727.0,1009.8 L748.5,983.5 L779.6,949.3 M650.0,1080.0 L689.4,1054.0 L723.6,1020.3 L744.6,995.4 L782.7,966.5 M650.0,1080.0 L698.1,1073.0 L762.7,1075.1 L826.4,1070.8 M650.0,1080.0 L672.3,1076.3 L688.5,1070.1 L706.8,1060.9 L721.9,1050.6 L735.7,1041.6 M684.3,1094.1 L704.8,1084.5 L725.6,1075.5 M642.1,1137.0 L662.3,1198.9 M579.2,1162.1 L564.2,1228.9 M604.8,1119.5 L572.3,1180.3 M566.0,1132.2 L547.7,1151.5 L528.5,1169.8 M575.5,1083.4 L555.4,1136.1 M688.3,981.6 L707.1,955.0 L725.3,927.9 M748.5,983.5 L780.5,979.8 M698.1,1073.0 L762.7,1075.7 M625.5,1122.4 L613.6,1106.4 L611.4,1088.2 M645.4,1035.9 L663.8,1037.6 M675.5,1051.7 L685.8,1064.1 M598.4,1055.1 L610.0,1029.9 M610.0,1029.9 L634.5,1012.2 L666.4,1008.1" />
-      </g>
-      <g class="crack-line">
-        <path
-          d="M330.0,480.0 L368.9,490.1 L403.9,501.1 L443.5,524.4 L470.6,537.4 M330.0,480.0 L365.4,476.6 L398.3,466.0 L427.5,449.1 L472.2,431.2 L511.3,421.9 M330.0,480.0 L357.8,499.6 L398.3,526.3 L426.6,537.0 L459.5,554.9 M330.0,480.0 L353.1,532.2 L371.7,569.2 L387.8,619.1 L400.4,671.4 M330.0,480.0 L336.5,510.6 L340.5,554.4 L346.8,590.9 L354.9,623.8 L365.7,646.0 M330.0,480.0 L294.9,500.3 L261.9,514.5 L235.0,528.2 L192.0,542.6 L146.8,552.1 M330.0,480.0 L283.0,486.3 L230.7,486.2 L179.0,487.8 M330.0,480.0 L272.9,480.7 L227.8,485.4 L179.7,482.0 M330.0,480.0 L305.2,487.2 L281.7,499.8 L246.7,514.0 L222.7,522.1 L192.0,529.7 M330.0,480.0 L321.4,419.1 L313.6,376.8 L302.9,315.9 L299.9,266.8 M330.0,480.0 L328.5,450.1 L327.4,410.4 L334.5,373.8 L334.6,341.8 L332.1,303.3 M330.0,480.0 L346.5,465.4 L370.7,442.4 L395.6,420.8 L412.4,406.8 L434.4,392.1 M330.0,480.0 L349.3,444.0 L392.2,393.7 L430.5,365.7 M330.0,480.0 L359.3,458.2 L379.1,445.7 L406.6,422.5 M330.0,480.0 L360.8,474.0 L377.7,468.4 L405.8,466.2 L429.7,463.8 M368.9,490.1 L380.7,473.4 L393.3,457.2 M336.5,510.6 L377.0,548.7 M261.9,514.5 L256.4,531.7 L248.7,548.0 M283.0,486.3 L254.8,505.1 L223.9,519.0 M328.5,450.1 L337.3,435.8 L348.5,423.3 M359.3,458.2 L418.0,443.0 M361.9,480.0 L364.6,493.4 M321.9,508.5 L309.7,506.9 L304.5,495.8 M300.1,461.5 L308.6,451.6 L320.3,445.8 L333.6,441.5 L345.5,448.8 M397.1,506.0 L393.1,537.5 M362.1,544.5 L337.8,564.5 L305.9,564.6 M286.6,422.6 L310.2,410.5 M650.0,1080.0 L691.9,1086.2 L728.5,1098.2 L774.8,1107.9 L808.9,1121.7 M650.0,1080.0 L684.3,1094.1 L722.2,1101.6 L755.2,1109.1 L784.6,1113.9 M650.0,1080.0 L628.6,1130.9 L609.7,1204.0 L578.9,1279.8 M650.0,1080.0 L645.9,1103.7 L642.1,1137.0 L635.3,1159.3 L632.1,1194.4 M650.0,1080.0 L616.3,1109.5 L579.2,1162.1 L555.1,1205.8 M650.0,1080.0 L604.8,1119.5 L578.5,1154.2 L532.4,1205.6 M650.0,1080.0 L599.8,1105.1 L566.0,1132.2 L509.4,1161.2 M650.0,1080.0 L631.5,1092.0 L613.4,1104.5 L597.5,1113.8 L579.1,1122.1 L564.5,1133.6 M650.0,1080.0 L575.5,1083.4 L494.3,1082.1 L430.7,1087.7 M650.0,1080.0 L632.3,1032.0 L607.7,989.0 L585.0,951.9 M650.0,1080.0 L663.0,1029.9 L688.3,981.6 L723.6,917.0 M650.0,1080.0 L689.1,1044.9 L727.0,1009.8 L748.5,983.5 L779.6,949.3 M650.0,1080.0 L689.4,1054.0 L723.6,1020.3 L744.6,995.4 L782.7,966.5 M650.0,1080.0 L698.1,1073.0 L762.7,1075.1 L826.4,1070.8 M650.0,1080.0 L672.3,1076.3 L688.5,1070.1 L706.8,1060.9 L721.9,1050.6 L735.7,1041.6 M684.3,1094.1 L704.8,1084.5 L725.6,1075.5 M642.1,1137.0 L662.3,1198.9 M579.2,1162.1 L564.2,1228.9 M604.8,1119.5 L572.3,1180.3 M566.0,1132.2 L547.7,1151.5 L528.5,1169.8 M575.5,1083.4 L555.4,1136.1 M688.3,981.6 L707.1,955.0 L725.3,927.9 M748.5,983.5 L780.5,979.8 M698.1,1073.0 L762.7,1075.7 M625.5,1122.4 L613.6,1106.4 L611.4,1088.2 M645.4,1035.9 L663.8,1037.6 M675.5,1051.7 L685.8,1064.1 M598.4,1055.1 L610.0,1029.9 M610.0,1029.9 L634.5,1012.2 L666.4,1008.1" />
-      </g>
-    </svg>
-  </div>
-
-  <div class="hearts-bg" id="heartsBg"></div>
+  <!-- A little floating magic -->
+  <div class="hearts-bg" id="heartsBg" aria-hidden="true"></div>
 
   <div class="wrap">
     <!-- Header -->
     <header class="site-header">
-      <h1 class="site-title">date planner 💕</h1>
-      <p class="site-sub">Let's do it the right way! ✨</p>
+      <h1 class="site-title">Mark's List ⚡</h1>
+      <p class="site-sub">A little magic. A lot of possibilities.</p>
     </header>
 
     <div id="errorBox"></div>
@@ -1620,19 +1602,19 @@
       <div class="input-group">
         <div class="role-toggle-container">
           <span class="role-label active" id="label-you"
-            onclick="document.getElementById('roleToggle').checked = false; document.getElementById('roleToggle').dispatchEvent(new Event('change'))">💜
+            onclick="document.getElementById('roleToggle').checked = false; document.getElementById('roleToggle').dispatchEvent(new Event('change'))">🔵
             I am Me (♂)</span>
           <label class="switch">
             <input type="checkbox" id="roleToggle">
             <span class="slider"></span>
           </label>
           <span class="role-label" id="label-partner"
-            onclick="document.getElementById('roleToggle').checked = true; document.getElementById('roleToggle').dispatchEvent(new Event('change'))">🧡
+            onclick="document.getElementById('roleToggle').checked = true; document.getElementById('roleToggle').dispatchEvent(new Event('change'))">🟡
             I am Me (♀)</span>
         </div>
-        <input id="loginPassword" type="password" placeholder="Remember where we went for our first date 💌"
+        <input id="loginPassword" type="password" placeholder="The secret password, please..."
           autocomplete="current-password" />
-        <button id="loginBtn" class="btn-primary">Let me in! 🌸</button>
+        <button id="loginBtn" class="btn-primary">Let me in! ✨</button>
       </div>
     </div>
 
@@ -1641,8 +1623,8 @@
       <button id="logoutBtn" class="btn-ghost logout-icon-btn" title="Sign out" aria-label="Sign out">🚪</button>
 
       <div class="addrow">
-        <input id="newTitle" placeholder="✈️ What do you want to do?" style="flex:2" />
-        <input id="newNotes" placeholder="📝 Details(but you don't have to)" style="flex:2" />
+        <input id="newTitle" placeholder="🧭 What do you want to do?" style="flex:2" />
+        <input id="newNotes" placeholder="📜 Details (if the quest needs them)" style="flex:2" />
         <div style="display:flex; align-items:center; gap:6px; flex:0 0 auto; min-width:90px;">
           <label for="newDuration" style="font-size:13px; font-weight:700; color:var(--text-soft);">Days:</label>
           <input id="newDuration" type="number" min="1" value="1" style="width:55px;" />
@@ -1652,12 +1634,12 @@
             <input type="checkbox" id="newSurprise" />
             <span class="slider-sm"></span>
           </label>
-          <span>🎁 Surprise</span>
+          <span>🧙 Surprise</span>
         </div>
         <span class="loadstate" id="loadState"></span>
         <button id="addBtn" class="btn-primary">＋ Add idea</button>
         <div class="wheel-launch-row" id="wheelLaunchRow" style="display:none">
-          <button class="wheel-launch-btn" id="wheelLaunchBtn" style="padding:7px 13px;font-size:13px">🎡 Spin the wheel</button>
+          <button class="wheel-launch-btn" id="wheelLaunchBtn" style="padding:7px 13px;font-size:13px">🪄 Spin the wheel</button>
         </div>
       </div>
 
@@ -1671,7 +1653,7 @@
   <div class="addcal-menu" id="globalAddCalMenu">
     <button id="addcalGoogleBtn">📆 Google Calendar</button>
     <button id="addcalIcsBtn">📥 Apple / Outlook (.ics)</button>
-    <button id="addcalTimeTreeBtn">🌳 TimeTree</button>
+    <button id="addcalTimeTreeBtn">🦉 TimeTree</button>
   </div>
 
   <div id="wheelOverlay" style="display:none"></div>
@@ -1704,13 +1686,13 @@
     let editingMemoryId = null;
     let wheelCandidates = [];
 
-    /* ── Floating hearts ── */
-    (function spawnHearts() {
+    /* ── Floating magic ── */
+    (function spawnMagic() {
       const bg = document.getElementById('heartsBg');
-      const emojis = ['💕', '🌸', '✨', '💗', '🌷', '💖', '🍓', '💝', '🌺', '🫧'];
+      const emojis = ['✦', '✧', '⚡', '🪄', '✦', '✧', '🦉', '✨'];
       for (let i = 0; i < 18; i++) {
         const el = document.createElement('span');
-        el.className = 'heart-float';
+        el.className = 'magic-float';
         el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
         el.style.left = (Math.random() * 100) + '%';
         el.style.fontSize = (14 + Math.random() * 18) + 'px';
@@ -1722,7 +1704,7 @@
 
     /* ── Sparkle burst on button click ── */
     function spawnSparkles(x, y) {
-      const sparks = ['✨', '💕', '🌸', '⭐', '💖'];
+      const sparks = ['✨', '⚡', '✦', '🪄', '✧'];
       for (let i = 0; i < 5; i++) {
         const el = document.createElement('span');
         el.className = 'sparkle';
@@ -1870,7 +1852,7 @@
       } catch (e) { copied = false; }
 
       if (copied) {
-        showToast('📋 Event details copied! Paste into your new TimeTree event 🌳');
+        showToast('📋 Event details copied! Paste into your new TimeTree event 🦉');
       } else {
         window.prompt('Copy these details, then paste into your new TimeTree event:', text);
       }
@@ -2098,7 +2080,7 @@
   </div>`;
       if (matches.length) {
         html += `<div class="match-row">
-      <span class="match-text">💚 ${matches.length} matching date${matches.length > 1 ? 's' : ''}!</span>
+      <span class="match-text">🟢 ${matches.length} matching date${matches.length > 1 ? 's' : ''}!</span>
     </div>
     <div class="match-buttons">
       ${matches.map(startD => {
@@ -2113,7 +2095,7 @@
         }).join('')}
       </div>`;
       } else {
-        html += `<p class="no-match">💭 No common dates yet! - Come on, find some time, only ${dur} ${dur > 1 ? 'consecutive days' : 'day'}!</p>`;
+        html += `<p class="no-match">📜 No common dates yet! - Come on, find some time, only ${dur} ${dur > 1 ? 'consecutive days' : 'day'}!</p>`;
       }
 
       let currentMonth = '';
@@ -2157,8 +2139,8 @@
 
       if (activeIdeas.length === 0) {
         list.innerHTML = `<div class="empty">
-      <span class="empty-emoji">🌸</span>
-      ${(doneIdeas.length > 0 || missedIdeas.length > 0) ? 'All caught up here - add a new idea above! 💭' : 'No ideas yet - add your first one above!'}
+      <span class="empty-emoji">✨</span>
+      ${(doneIdeas.length > 0 || missedIdeas.length > 0) ? 'All caught up here - add a new idea above! 📜' : 'No ideas yet - add your first one above!'}
     </div>`;
         renderDoneSection(doneIdeas);
         renderMissedSection(missedIdeas);
@@ -2169,7 +2151,7 @@
         const isPicked = idea.status === 'picked';
         const dur = idea.duration || 1;
         const mCount = getMatches(idea).length;
-        const matchLabel = (mCount > 0 && !isPicked) ? `<span style="font-size:12px; color:var(--both); font-weight:800; margin-left:6px;">💚 ${mCount} match${mCount > 1 ? 'es' : ''}!</span>` : '';
+        const matchLabel = (mCount > 0 && !isPicked) ? `<span style="font-size:12px; color:var(--both); font-weight:800; margin-left:6px;">🟢 ${mCount} match${mCount > 1 ? 'es' : ''}!</span>` : '';
 
         let countdownBannerHtml = '';
         if (isPicked && idea.confirmed_date) {
@@ -2206,7 +2188,7 @@
         }
 
         const addedByMe = idea.added_by === role;
-        const emoji = idea.added_by === 'you' ? '💜' : '🧡';
+        const emoji = idea.added_by === 'you' ? '🔵' : '🟡';
         const addedByHtml = idea.added_by ? `<p class="added-by added-by-${idea.added_by}">${emoji} ${addedByMe ? 'Added by you' : 'Added by partner'}</p>` : '';
 
         const avail = availCache[idea.id] || { you: [], partner: [] };
@@ -2224,15 +2206,15 @@
         const isEditing = editingIdeaId === idea.id;
         const isHiddenSurprise = !!idea.is_surprise && idea.added_by && idea.added_by !== role && idea.status === 'proposed';
         const surpriseOwnerTag = (idea.is_surprise && idea.added_by === role && idea.status === 'proposed')
-          ? `<span class="surprise-tag">🎁 Surprise (hidden from partner)</span>` : '';
+          ? `<span class="surprise-tag">🧙 Surprise (hidden from partner)</span>` : '';
 
         const notesBlock = idea.notes
           ? `<p class="idea-notes">${linkify(idea.notes)}</p>`
           : `<button class="add-details-btn" data-edit="${idea.id}" data-focus-notes="1">📝 Add details</button>`;
 
         const editPanel = isEditing ? `<div class="edit-panel" id="edit-${idea.id}">
-          <input class="edit-title-input" value="${escapeHtml(idea.title)}" placeholder="✈️ What do you want to do?" />
-          <textarea class="edit-notes-input" placeholder="📝 Add details, links, notes...">${escapeHtml(idea.notes || '')}</textarea>
+          <input class="edit-title-input" value="${escapeHtml(idea.title)}" placeholder="🧭 What do you want to do?" />
+          <textarea class="edit-notes-input" placeholder="📜 Add details, links, notes...">${escapeHtml(idea.notes || '')}</textarea>
           <div class="edit-panel-row">
             <label style="font-size:13px;font-weight:700;color:var(--text-soft)">Days:</label>
             <input type="number" min="1" class="edit-duration-input" value="${dur}" style="width:70px" />
@@ -2242,7 +2224,7 @@
               <input type="checkbox" class="edit-surprise-input" ${idea.is_surprise ? 'checked' : ''} />
               <span class="slider-sm"></span>
             </label>
-            <span>🎁 Surprise</span>
+            <span>🧙 Surprise</span>
           </div>
           <div class="edit-panel-actions">
             <button class="btn-primary" data-save-edit="${idea.id}">💾 Save</button>
@@ -2252,7 +2234,7 @@
         </div>` : '';
 
         const cardHeaderHtml = isHiddenSurprise
-          ? `<p class="surprise-placeholder-title">🎁 This is a surprise! ${matchLabel}</p>
+          ? `<p class="surprise-placeholder-title">🧙 This is a surprise! ${matchLabel}</p>
              <p class="idea-notes" style="font-style:italic">Pick some dates and you'll know what it is 😉</p>
              ${availTicksHtml}`
           : `<p class="idea-title">${isPicked ? '✅ ' : '💡 '}${idea.title} ${dur > 1 ? `<span style="font-size:12px;color:var(--text-soft);font-weight:600;margin-left:4px">(${dur} days)</span>` : ''}${matchLabel}</p>
@@ -2270,7 +2252,7 @@
         </div>
         <div class="card-right">
           ${(!isHiddenSurprise) ? `<button class="icon-btn" data-edit="${idea.id}" title="Edit idea">✏️</button>` : ''}
-          <span class="pill ${isPicked ? 'picked' : 'proposed'}">${isPicked ? '🎀 Picked!' : '✨ Proposed'}</span>
+          <span class="pill ${isPicked ? 'picked' : 'proposed'}">${isPicked ? '🏅 Picked!' : '✨ Proposed'}</span>
           ${!isPicked && !isEditing ? `<span class="chevron ${isOpen ? 'open' : ''}">⌄</span>` : ''}
         </div>
       </div>
@@ -2313,7 +2295,7 @@
           const notes = panel.querySelector('.edit-notes-input').value.trim();
           const duration = parseInt(panel.querySelector('.edit-duration-input').value, 10) || 1;
           const isSurprise = panel.querySelector('.edit-surprise-input').checked;
-          if (!title) { showError('Give your idea a title first 💭'); return; }
+          if (!title) { showError('Give your idea a title first 📜'); return; }
           await updateIdea(id, { title, notes, duration, isSurprise });
           editingIdeaId = null;
           await loadIdeas();
@@ -2419,9 +2401,9 @@
         { id: 'first', emoji: '🎉', label: 'First Date', earned: doneCount >= 1 },
         { id: 'five', emoji: '🔥', label: '5 Dates', earned: doneCount >= 5 },
         { id: 'ten', emoji: '🏆', label: '10 Dates', earned: doneCount >= 10 },
-        { id: 'twenty', emoji: '💯', label: '20 Dates', earned: doneCount >= 20 },
+        { id: 'twenty', emoji: '🏅', label: '20 Dates', earned: doneCount >= 20 },
         { id: 'trip1', emoji: '🧳', label: 'First Trip', earned: tripCount >= 1 },
-        { id: 'trip3', emoji: '🌍', label: 'Explorer', earned: tripCount >= 3 },
+        { id: 'trip3', emoji: '🗺️', label: 'Explorer', earned: tripCount >= 3 },
       ];
     }
 
@@ -2441,7 +2423,7 @@
       container.innerHTML = `
         ${badgesRowHtml}
         <button class="done-toggle" id="doneToggleBtn">
-          <span>🎀 Done Dates</span>
+          <span>🏅 Done Dates</span>
           <span class="done-count-badge">${doneIdeas.length}</span>
           <span class="chevron ${doneSectionOpen ? 'open' : ''}">⌄</span>
         </button>
@@ -2459,7 +2441,7 @@
         let memoryHtml;
         if (isEditingMemory) {
           memoryHtml = `<div class="memory-edit-row">
-              <textarea class="memory-input" placeholder="What made this day special? 💭">${escapeHtml(idea.memory || '')}</textarea>
+              <textarea class="memory-input" placeholder="What made this day special? 📜">${escapeHtml(idea.memory || '')}</textarea>
               <div style="display:flex;gap:8px">
                 <button class="btn-primary" data-save-memory="${idea.id}" style="padding:6px 12px;font-size:12px">💾 Save</button>
                 <button class="btn-ghost" data-cancel-memory="${idea.id}" style="padding:6px 12px;font-size:12px">Cancel</button>
@@ -2467,7 +2449,7 @@
             </div>`;
         } else if (idea.memory) {
           memoryHtml = `<div class="memory-block">
-              <p class="memory-text">💭 "${linkify(idea.memory)}"</p>
+              <p class="memory-text">📜 "${linkify(idea.memory)}"</p>
               <button class="memory-add-btn" data-edit-memory="${idea.id}">Edit memory</button>
             </div>`;
         } else {
@@ -2478,7 +2460,7 @@
         return `<div class="done-card" style="flex-direction:column;align-items:stretch;">
               <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
                 <div>
-                  <p class="done-card-title">💕 ${idea.title} ${dur > 1 ? `<span style="font-size:11px;color:var(--text-soft);font-weight:600">(${dur} days)</span>` : ''}</p>
+                  <p class="done-card-title">✨ ${idea.title} ${dur > 1 ? `<span style="font-size:11px;color:var(--text-soft);font-weight:600">(${dur} days)</span>` : ''}</p>
                   <p class="done-card-date">${label}</p>
                 </div>
                 <button class="btn-ghost" data-undo-done="${idea.id}" style="padding:4px 8px;font-size:11px">Undo</button>
@@ -2556,7 +2538,7 @@
       const daysSince = Math.round((new Date(todayISO + 'T00:00:00') - new Date(lastEndISO + 'T00:00:00')) / 86400000);
 
       if (daysSince > 21) {
-        banner.innerHTML = `<div class="drought-banner">📢 Breaking news: ${daysSince} days since our last date. Romance meter is running low…</div>`;
+        banner.innerHTML = `<div class="drought-banner">📢 A message from the Ministry: ${daysSince} days since our last date. The magic is wearing thin…</div>`;
       } else {
         banner.innerHTML = '';
       }
@@ -2568,14 +2550,14 @@
 
     function wheelLabelForIdea(idea) {
       const isHidden = !!idea.is_surprise && idea.added_by && idea.added_by !== role && idea.status === 'proposed';
-      if (isHidden) return '🎁 Surprise idea';
+      if (isHidden) return '🧙 Surprise idea';
       const t = idea.title || '';
       return t.length > 16 ? t.slice(0, 15) + '…' : t;
     }
 
     function wheelFullNameForIdea(idea) {
       const isHidden = !!idea.is_surprise && idea.added_by && idea.added_by !== role && idea.status === 'proposed';
-      return isHidden ? '🎁 Surprise idea' : (idea.title || '');
+      return isHidden ? '🧙 Surprise idea' : (idea.title || '');
     }
 
     function openWheel() {
@@ -2600,7 +2582,7 @@
         <div class="wheel-overlay" id="wheelBackdrop">
           <div class="wheel-modal">
             <button class="wheel-close-btn" id="wheelCloseBtn">✕</button>
-            <p class="wheel-title">🎡 Little help in picking our next date!</p>
+            <p class="wheel-title">🪄 Let fate choose your next adventure!</p>
             <div class="wheel-stage">
               <div class="wheel-pointer"></div>
               <div class="wheel-disc" id="wheelDisc" style="background: conic-gradient(from 0deg, ${stops});">
@@ -2610,7 +2592,7 @@
             </div>
             <p class="wheel-result" id="wheelResultText"></p>
             <div class="wheel-actions" id="wheelActionsRow">
-              <button class="btn-primary" id="wheelSpinBtn">🎡 Spin!</button>
+              <button class="btn-primary" id="wheelSpinBtn">🪄 Spin!</button>
               <button class="btn-ghost" id="wheelCancelBtn">Close</button>
             </div>
           </div>
@@ -2792,7 +2774,7 @@
       document.getElementById('loginBox').style.display = 'none';
       document.getElementById('appBox').style.display = 'block';
       const loadEl = document.getElementById('loadState');
-      loadEl.innerHTML = '<span class="spin">🌸</span> Loading…';
+      loadEl.innerHTML = '<span class="spin">✨</span> Loading…';
       await loadIdeas();
       clearError();
       loadEl.innerHTML = '';
@@ -2805,7 +2787,7 @@
       if (toggle.checked) {
         document.getElementById('label-you').classList.remove('active');
         document.getElementById('label-partner').classList.add('active');
-        if (passInput) passInput.placeholder = "Remember where we went for our first date? 💌";
+        if (passInput) passInput.placeholder = "The secret password, please...";
       } else {
         document.getElementById('label-you').classList.add('active');
         document.getElementById('label-partner').classList.remove('active');
@@ -2831,7 +2813,7 @@
     document.getElementById('loginBtn').addEventListener('click', async (e) => {
       clearError();
       const password = document.getElementById('loginPassword').value;
-      if (!password) { showError('Enter the password 💌'); return; }
+      if (!password) { showError('Enter the password 📜'); return; }
 
       role = document.getElementById('roleToggle').checked ? 'partner' : 'you';
       localStorage.setItem('planner_role', role);
@@ -2842,7 +2824,7 @@
       const email = role === 'you' ? YOU_EMAIL : PARTNER_EMAIL;
       const { error } = await sb.auth.signInWithPassword({ email, password });
 
-      if (error) { showError('I cannot believe you dont remember! 🙈'); return; }
+      if (error) { showError('The password doesn't seem right. Try again!'); return; }
       await showApp();
     });
 
