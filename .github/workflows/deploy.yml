@@ -1,9 +1,14 @@
+
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "main"
+        type: string
 
 permissions:
   contents: read
@@ -17,12 +22,16 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Checkout
+      - name: Checkout selected branch
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
 
       - name: Prepare site with injected secrets
         run: |
