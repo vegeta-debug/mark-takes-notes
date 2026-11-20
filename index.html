@@ -2075,7 +2075,7 @@
       const theirColor = role === 'you' ? 'var(--partner)' : 'var(--you)';
       let html = `<div class="legend">
     <span><span class="dot" style="background:${myColor}"></span>you free</span>
-    <span><span class="dot" style="background:${theirColor}"></span>partner free</span>
+    <span><span class="dot" style="background:${theirColor}"></span>they're free</span>
     <span><span class="dot" style="background:var(--both)"></span>both free 🎉</span>
   </div>`;
       if (matches.length) {
@@ -2189,7 +2189,7 @@
 
         const addedByMe = idea.added_by === role;
         const emoji = idea.added_by === 'you' ? '🔵' : '🟡';
-        const addedByHtml = idea.added_by ? `<p class="added-by added-by-${idea.added_by}">${emoji} ${addedByMe ? 'Added by you' : 'Added by partner'}</p>` : '';
+        const addedByHtml = idea.added_by ? `<p class="added-by added-by-${idea.added_by}">${emoji} ${addedByMe ? 'Added by you' : 'Added by them'}</p>` : '';
 
         const avail = availCache[idea.id] || { you: [], partner: [] };
         const youHasAvail = avail.you.length > 0;
