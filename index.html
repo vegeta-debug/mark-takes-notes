@@ -2824,7 +2824,7 @@
       const email = role === 'you' ? YOU_EMAIL : PARTNER_EMAIL;
       const { error } = await sb.auth.signInWithPassword({ email, password });
 
-      if (error) { showError("It's not Leviosa, it's Leviosaaa. Try again!"); return; }
+      if (error) { showError("try it until the 100th time!"); return; }
       await showApp();
     });
 
